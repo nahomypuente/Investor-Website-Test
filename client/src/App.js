@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ItemCompany from './ItemCompany.js';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,14 @@ class App extends Component {
       companies: [],
       item_company: ''
     }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(sygla) {
+    console.log(sygla);
+    this.setState({
+      item_company: sygla
+    })
   }
 
   componentDidMount() {
@@ -35,11 +44,14 @@ class App extends Component {
         <h1>Investor Web</h1>
         <select>
           { this.state.companies.map((company, i) => (
-            <option key={i} onClick={this.handleClick}>
+            <option key={i} onClick={() => this.handleClick(company.sygla)}>
               {company.name}
             </option>
           ))}
         </select>
+        { this.state.item_company !== '' ?
+          <ItemCompany sygla={this.state.item_company}/> : ''
+        }
       </div>
     );
   }
