@@ -1,0 +1,23 @@
+{
+  "name": "investor-website-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahomypuente/Investor-Website-Test.git"
+  },
+  "author": "nahomy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahomypuente/Investor-Website-Test/issues"
+  },
+  "homepage": "https://github.com/nahomypuente/Investor-Website-Test#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
