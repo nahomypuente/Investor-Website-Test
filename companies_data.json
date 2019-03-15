@@ -1,0 +1,7 @@
+[
+  {"name": "Facebook", "syglas":"FB"},
+  {"name": "Apple", "sygla": "AAPL"},
+  {"name": "Microsoft", "sygla": "MSFT"},
+  {"name": "Google", "sygla": "GOOGL"},
+  {"name": "Amazon", "sygla": "AMZN"}
+]
