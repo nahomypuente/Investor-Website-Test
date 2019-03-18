@@ -86,8 +86,4 @@ class App extends Component {
       );
     }
   }
-//
-/*{ this.state.sygla !== '' ?
-  <ItemCompany sygla={this.state.sygla}/> : ''
-}*/
 export default App;

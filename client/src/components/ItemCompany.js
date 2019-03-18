@@ -43,7 +43,6 @@ class ItemCompany extends Component {
     const data_first_key = Object.keys(data)[0];
 
     if (this.state.today.date === data_first_key) {
-      //realizar resta
       const close = "4. close";
       const data_yest = Object.values(data)[1];
       const data_today = data_first_value;
