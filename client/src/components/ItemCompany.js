@@ -8,7 +8,7 @@ class ItemCompany extends Component {
   constructor(props) {
     super();
     this.state = {
-      
+
       loading: false,
       data_company: {},
       price: { difference: 0, percent: 0, number:0},
@@ -42,21 +42,15 @@ class ItemCompany extends Component {
     const data_first_value = Object.values(data)[0];
     const data_first_key = Object.keys(data)[0];
 
-    //si los datos de hoy fueron cargados
-    //if (this.state.today.date === data_first_key) {
-    if ('2019-03-15' === data_first_key) {
+    if (this.state.today.date === data_first_key) {
       //realizar resta
       const close = "4. close";
       const data_yest = Object.values(data)[1];
       const data_today = data_first_value;
-      console.log("closes")
-      console.log(typeof data_today[close]);
       const close_today = parseFloat(data_today[close]);
       const close_yest = parseFloat(data_yest[close]);
       const subtract =  close_today - close_yest;
       this.percent(close_today, subtract);
-      console.log(typeof subtract)
-      //datos cargados y perdidas
       const today = this.state.today;
       const price = this.state.price;
       today.data = data_today;
@@ -69,23 +63,19 @@ class ItemCompany extends Component {
       })
     }
     else {
-      console.log("Los datos no han sido cargados, se cargan a las 9:30")
-      //
+      console.log("Date is no Update")
     }
   }
 
   handleSubmit() {
     this.setState( {loading: true}, () => {
       const sygla = this.props.match.params.sygla
-      console.log(sygla)
       axios
         .get('/api/company/' + sygla)
         .then(
           response => {
-            console.log("entre al componentDidMount de ItemCompany");
             const key = "Time Series (Daily)";
             const daily = response.data.data[key];
-            console.log(daily)
             this.access_day();
             this.subtract_daily_close(daily);
             this.setState({
