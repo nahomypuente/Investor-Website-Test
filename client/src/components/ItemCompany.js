@@ -106,13 +106,13 @@ class ItemCompany extends Component {
                     <Spinner size={40} spinnerColor={"#fff"} spinnerWidth={3} visible={true} />
                     : (
                     <form onSubmit={this.handleSubmit}>
-                      <button class="button button4">Today</button>
+                      <button className="button button4">Today</button>
                     </form>
                   )}
                 </div>)
               }
               <br></br>
-              <button class="button button5" onClick={() => this.props.history.push('/')}>
+              <button className="button button5" onClick={() => this.props.history.push('/')}>
                 Back
               </button>
             </div>

@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   handleClick(sygla) {
-    console.log(sygla);
     this.setState({
       sygla: sygla,
       redirect: true
@@ -55,8 +54,6 @@ class App extends Component {
   }
 
   render() {
-      console.log("rende main")
-      console.log(this.state.companies)
       return (
           <div className="App">
             <section className="hero">
