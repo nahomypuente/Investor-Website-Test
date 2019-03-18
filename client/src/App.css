@@ -1,33 +1,235 @@
 .App {
-  text-align: center;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+.hero {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /*sizing*/
+  width: 100vw;
+  height: 100vh;
+
+  /* Flexbox stuff */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  /*Text styles*/
+  text-align: center;
   color: white;
+
+  /*Background styles*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("./img/atardecer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  /*Text styles*/
+  font-size: 4em;
+
+  /*Margins*/
+  margin-top: 0;
+  margin-bottom: 0.5em;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date {
+  background-color: rgba(5,4,2,0.7);
+  background-position: center;
+  justify-content: center;
+  width: 500px;
+  height: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 50px;
+}
+
+.date .priceP {
+  color: green;
+}
+
+.date .priceN {
+  color: red;
+}
+
+.button {
+  background-color: #e7e7e7; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button4 {
+  background-color: white;
+  color:black;
+  border-radius: 12px;
+}
+
+.button5 {
+  border-radius: 50%;
+  background-color: #555555;
+}
+
+.button4:hover {
+  background-color: #e7e7e7;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------------*/
+
+@import "https://fonts.googleapis.com/css?family=Roboto:100,300";
+@import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css";
+@font-face {
+  font-family: "ProximaNovaSoftW03-Semibold";
+  src: url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.eot");
+  src: url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.woff") format("woff"), url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/251c35fe6eeec7ffa3d335357aabcbd0.svg#ProximaNovaSoftW03-Semibold") format("svg");
+}
+.aoyue-select {
+  color: black;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  height: 100%;
+  border-bottom: 0px;
+  border-radius: 3px;
+  font-size: 12px;
+  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, 0.5);
+}
+.aoyue-select:not(:hover) > i.toggle.icon-arrow-down {
+  display: block !important;
+}
+.aoyue-select:not(:hover) > i.toggle.icon-arrow-up {
+  display: none !important;
+}
+.aoyue-select:not(:hover) label.option > input:not(:checked) ~ span.title {
+  display: none !important;
+}
+.aoyue-select > i.toggle {
+  position: absolute;
+  z-index: 4;
+  right: 1.5em;
+  top: 1.6em;
+  color: #ccc;
+}
+.aoyue-select .title,
+.aoyue-select .placeholder {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em 2em;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.aoyue-select > input {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  cursor: pointer;
+}
+.aoyue-select > input:checked ~ i.toggle.icon-arrow-down {
+  display: none;
+}
+.aoyue-select > input:checked ~ i.toggle.icon-arrow-up {
+  display: block;
+}
+.aoyue-select > input:checked div.options label.option .title {
+  display: none !important;
+}
+.aoyue-select > input:not(:checked) {
+  z-index: 4;
+}
+.aoyue-select > input:not(:checked) ~ label.option > span.title {
+  display: none;
+}
+.aoyue-select > input:not(:checked) ~ i.toggle.icon-arrow-up {
+  display: none;
+}
+.aoyue-select > input:not(:checked) ~ i.toggle.icon-arrow-down {
+  display: block;
+}
+.aoyue-select > input:disabled {
+  cursor: no-drop;
+}
+.aoyue-select > span.placeholder {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  color: #999;
+  border-top: 0px;
+}
+.aoyue-select label.option {
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  transition: all 1s ease-out;
+}
+.aoyue-select label.option span.title {
+  position: relative;
+  z-index: 2;
+  transition: background .3s ease-out;
+}
+.aoyue-select label.option span.title i.icon {
+  padding-right: 8px;
+  color: #92a8d1;
+}
+.aoyue-select label.option span.title:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.aoyue-select label.option input {
+  display: none;
+}
+.aoyue-select label.option input:checked ~ span.title {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  top: 0px;
+  font-size: 12px;
+  background: #fff;
+  border-top: 0px;
+  box-shadow: none;
+  color: inherit;
+  width: 100%;
+}
+.aoyue-select label.option input:disabled ~ span.title {
+  background: #f9f9f9 !important;
+  color: #aaa;
+}
+.aoyue-select label.option input:disabled ~ span.title:hover {
+  color: #aaa;
+  background: none;
+  cursor: no-drop;
 }
