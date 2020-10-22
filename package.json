@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/nahomypuente/Investor-Website-Test#readme",
   "dependencies": {
-    "concurrently": "^4.1.0",
     "express": "^4.16.4",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
